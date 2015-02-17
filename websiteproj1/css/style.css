@@ -1,0 +1,27 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	color: #FAF2BC;
+	background: #420600 url('img/bg-texture.jpg') repeat ;
+}
+
+
+#wrapper{
+	width: 1080px;
+	height: 960px;
+	margin-left: 200px;
+}
+
+ul.nav {
+	margin: 120px 0 0 0;
+	list-style: none;
+	float: right;
+}
+
+ul.nav li {
+	float: left;
+	margin-right: 40px;
+}
+
+u.nav li a {
+	color: FAF3BC;
+}
