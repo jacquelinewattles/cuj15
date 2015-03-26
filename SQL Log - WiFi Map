@@ -1,0 +1,15 @@
+SELECT boro, count(*) AS Borough FROM nyc_free_public_wifi_12052014
+GROUP BY boro
+
+SELECT 
+boro, count(*)
+FROM nyc_free_public_wifi_12052014
+GROUP BY boro
+ORDER BY count DESC
+
+SELECT location_t, count(*) FROM nyc_free_public_wifi_12052014 GROUP BY location_t
+
+Link to visualization: http://cdb.io/1FX4wo7
+
+
+Link to heat map: http://cdb.io/1FX4BZc
