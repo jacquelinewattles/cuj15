@@ -3,7 +3,7 @@
 
 		// Leaflet is in lat/long order
 
-	var map = L.map('map').setView([40.808059, -73.964008], 15);
+	var map = L.map('map').setView([40.808059, -73.964008], 17);
 	var marker = L.marker([40.8075, -73.9633]).addTo(map);
 	marker.bindPopup("The Columbia School of Journalism").openPopup();
 
