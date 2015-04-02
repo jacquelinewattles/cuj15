@@ -6,14 +6,13 @@
 }
 
 #menu {
-	background-color: rgba(255, 255, 255, .55);
-	border-radius: 20px;
-	height: auto;
+	background-color: rgba(255, 255, 255, .75);
+	height: 100%;
 	padding-bottom: 20px;
 	width: 150px;
 	position: absolute;
 	right: 20px;
-	top: 200px;
+	top: 0px;
 	text-align: center;
 }
 
