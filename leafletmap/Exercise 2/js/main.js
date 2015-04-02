@@ -39,7 +39,7 @@
 	$('.option').on('click', function(){
 		var id = $(this).attr('data-which');
 		var latlng = L.latLng(locations[id].lat, locations[id].lng);
-		map.setView(latlng, 11,{animate: true, duration: 5.0});
+		map.setView(latlng, 11);
 	});
 
 
@@ -48,7 +48,7 @@
 		$('.load').addClass('appear');
 		$('.image').addClass('disappear');
 		map.on('locationfound',function(){
-			$('.load').removeClass('appear');
+		$('.load').removeClass('appear');
 		$('.image').removeClass('disappear');
 		});
 	});
