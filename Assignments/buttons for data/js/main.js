@@ -9,9 +9,8 @@
 
 	*/
 
-	// An alternative to usind d3 would be to convert our csv to json and use jQuery's $.getJSON function.
+
 	d3.csv('data/subwaystation.csv', function(error, subwayStations){
-		// console.log(error, subwayData);
 		subwayStations.forEach(function(subwayStation){
 			var delimiter = '(';
 			var subway_station_name_parts = subwayStation.name.split(delimiter);
@@ -22,25 +21,26 @@
 				subwayStation.direction = subway_direction;
 			}
 
-			//replace the name with the name minus the direction
 			subwayStation.name = subway_station_name_parts[0].trim();
 
-			//Make a new column that is our line column but as an array of lines
 			subwayStation.lineList = subwayStation.line.split('-');
 		});
 
-		// Write it all to the canvas
-		// $('#canvas').append('<div>'+ subwayStations[1].name +
-		// ', '+ subwayStations[1].direction + ' ' + subwayStations[1].lineList.join(' - ') + '</div>');
 
-
-		var filtered_entrances = subwayStations.filter(function(subwayStation){
-			return _.contains(subwayStation.lineList, '2') || _.contains(subwayStation.lineList, '3') || _.contains(subwayStation.lineList, 'A') || _.contains(subwayStation.lineList, 'C');
-
+		var aLineStops = subwayStations.filter(function(subwayStation){
+			return _.contains(subwayStation.lineList, 'A'); 
 		});
 
-		filtered_entrances.forEach(function(subwayStation){
-			$('#canvas').append('<div>'+ subwayStation.name + ' ,' + subwayStation.direction + ' ' + subwayStation.lineList.join(' - ') + '</div>')
+		var cLineStops = subwayStations.filter(function(subwayStation){
+			return _.contains(subwayStation.lineList, 'C'); 
+		});
+
+		aLineStops.forEach(function(subwayStation){
+			$('#aLine').click(function(){
+				$('#canvas').append(
+					'<div>' + subwayStation.name + ' ,' + subwayStation.direction + ' ' + subwayStation.lineList.join(' - ') + '</div>')
+
+			});
 
 		});
 
