@@ -43,13 +43,14 @@
 	});
 
 
-	$('#findMe').on('click',function(){
+	$('#findMe').on('click',function(e){
 		map.locate({setView:true, maxZoom: 15});
 		$('.load').addClass('appear');
 		$('.image').addClass('disappear');
 		map.on('locationfound',function(){
-		$('.load').removeClass('appear');
-		$('.image').removeClass('disappear');
+			$('.load').removeClass('appear');
+			$('.image').removeClass('disappear');
+		L.marker(e.latlng);
 		});
 	});
 

@@ -1,0 +1,5 @@
+git master
+git log
+git checkout (string of numbers)
+git stash (not commiting, just going back to last stabile commit)
+git stash apply (brings you back to uncommitted changed)
