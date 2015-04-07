@@ -35,21 +35,86 @@
 			return _.contains(subwayStation.lineList, 'C'); 
 		});
 
-		aLineStops.forEach(function(subwayStation){
-			$('#aLine').click(function(){
-				$('#canvas').append(
-					'<div>' + subwayStation.name + ' ,' + subwayStation.direction + ' ' + subwayStation.lineList.join(' - ') + '</div>')
+		var oLineStops = subwayStations.filter(function(subwayStation){
+			return _.contains(subwayStation.lineList, '1'); 
+		});
 
-			});
+		var twLineStops = subwayStations.filter(function(subwayStation){
+			return _.contains(subwayStation.lineList, '2'); 
+		});
 
+		var thLineStops = subwayStations.filter(function(subwayStation){
+			return _.contains(subwayStation.lineList, '3'); 
 		});
 
 
-		// HOMEWORK: MAKE SOME BUTTONS: all entrances on A or B line or which direction they're going
-			// ASSN2: Underscore: give short presentation on your underscore verb and say what is a good application and you have to use it and put it in the presentation
-		// MINE IS PLUCK! The world's funnest underscore verb
 
-		console.log(filtered_entrances.length);
+		function showA() { 
+			aLineStops.forEach(function(subwayStation){
+				$('#canvas').append(
+					'<div class="resultsList">' + subwayStation.name + ', ' + subwayStation.direction + ' ' + subwayStation.lineList.join(' - ') + '</div>')
+
+			});
+		}
+
+		function showC() {
+			cLineStops.forEach(function(subwayStation){
+				$('#canvas').append(
+					'<div class="resultsList">' + subwayStation.name + ', ' + subwayStation.direction + ' ' + subwayStation.lineList.join(' - ') + '</div>')
+			});
+		}
+
+		function showO() {
+			oLineStops.forEach(function(subwayStation){
+				$('#canvas').append(
+					'<div class="resultsList">' + subwayStation.name + ', ' + subwayStation.direction + ' ' + subwayStation.lineList.join(' - ') + '</div>')
+			});
+		}
+
+		function showTw() {
+			twLineStops.forEach(function(subwayStation){
+				$('#canvas').append(
+					'<div class="resultsList">' + subwayStation.name + ', ' + subwayStation.direction + ' ' + subwayStation.lineList.join(' - ') + '</div>')
+			});
+		}
+
+		function showTh() {
+			thLineStops.forEach(function(subwayStation){
+				$('#canvas').append(
+					'<div class="resultsList">' + subwayStation.name + ', ' + subwayStation.direction + ' ' + subwayStation.lineList.join(' - ') + '</div>')
+			});
+		}
+
+		$('#aLine').click(function(){
+			$('.dirInfo').html('Get off at 125th St. and walk southwest.')
+			$('#canvas').empty();
+			showA();
+		});
+
+		$('#cLine').click(function(){
+			$('.dirInfo').html('Get off at 110th St. Cathedral Parkway and walk by morningside park.')
+			$('#canvas').empty();
+			showC();
+		});
+
+		$('#oLine').click(function(){
+			$('.dirInfo').html('Get off at 116th St., and you\'ve already arrived!')
+			$('#canvas').empty();
+			showO();
+		});
+
+		$('#twLine').click(function(){
+			$('.dirInfo').html('Get off at 96th or 125th and switch to a local 1 train, then get off at 116.')
+			$('#canvas').empty();
+			showTw();
+		});
+
+		$('#thLine').click(function(){
+			$('.dirInfo').html('Switch to a local train at 96th or 125th, then get off at 116th.')
+			$('#canvas').empty();
+			showTh();
+		});
+
 		
 
 	})

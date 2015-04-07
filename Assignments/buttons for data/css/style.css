@@ -1,3 +1,45 @@
-.introTxt {
-	padding: 10px;
+* {
+	font-family: 'Lato', sans-serif;
+}
+
+.header{
+	text-align: center;
+}
+
+.resultsList {
+	line-height: 23px;
+}
+
+#canvas {
+	width: 50%;
+	display: inline-block;
+	float: right;
+	padding-top: 100px;
+}
+
+#map {
+	width: 50%;
+	display: inline-block;
+}
+
+#map img {
+	width: 500px;
+	height: auto;
+	display: inline-block;
+	padding-top: 100px;
+}
+
+#aLine, #cLine {
+	background-color: #80A2E8;
+	border-radius: 10px;
+}
+
+#oLine, #twLine, #thLine {
+	background-color: #E8A1A8;
+	border-radius: 10px;
+}
+
+.dirInfo {
+	height: 25px;
+	font-size: 10px;
 }
