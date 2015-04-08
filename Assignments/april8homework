@@ -1,0 +1,10 @@
+Underscore: _.pluck
+
+use: select one 'column' from a dataset
+
+syntax: 
+	var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+	_.pluck(stooges, 'name');
+	=> ["moe", "larry", "curly"]
+
+example: for my leaflet maps practice, I had created an array with values stored for each location I wanted to navigate to on my map. I gave the project a title with all of the city names in it by "plucking" the name variable out of that array and appending it to a title div.
