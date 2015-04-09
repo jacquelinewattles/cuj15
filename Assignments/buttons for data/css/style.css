@@ -30,6 +30,11 @@
 	padding-left: 10px;
 }
 
+#map.sticky {
+     position: fixed;
+     top: 0;
+  }
+
 #aLine, #cLine {
 	background-color: #80A2E8;
 	border-radius: 10px;

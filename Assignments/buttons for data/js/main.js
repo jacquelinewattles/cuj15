@@ -9,6 +9,12 @@
 
 	*/
 
+	var $window = $(window),
+      $stickyEl = $('#map'),
+        elTop = $stickyEl.offset().top;
+     $window.scroll(function() {
+     $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+    });
 
 	d3.csv('data/subwaystation.csv', function(error, subwayStations){
 		subwayStations.forEach(function(subwayStation){
