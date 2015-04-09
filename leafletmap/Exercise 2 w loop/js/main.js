@@ -38,7 +38,6 @@
 
 	var mapMark = [{lat: 30.2500, lng: -97.743061}, {lat:40.8075, lng:-73.9619}, {lat:34.052234, lng:-118.243685}, {lat: 41.878114, lng: -87.629798}]
 
-	var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
 
 	for (i = 0; i <= 3; i++) { 
 	var latlng = L.latLng(mapMark[i].lat, mapMark[i].lng);
