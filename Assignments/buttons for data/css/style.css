@@ -27,6 +27,7 @@
 	height: auto;
 	display: inline-block;
 	padding-top: 100px;
+	padding-left: 10px;
 }
 
 #aLine, #cLine {
@@ -41,5 +42,9 @@
 
 .dirInfo {
 	height: 25px;
-	font-size: 10px;
+	font-size: 20px;
+}
+
+.buttons {
+	padding-top: 10px;
 }
